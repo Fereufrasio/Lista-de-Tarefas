@@ -1,0 +1,132 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #102f5e;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin-left: 1rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #f1c40f;
+  }
+  
+  .hero {
+    background-color: #102f5e;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f1c40f;
+    color: #102f5e;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d4a017;
+  }
+  
+  .about-section,
+  .features-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-section h2,
+  .features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-item i {
+    font-size: 2rem;
+    color: #102f5e;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+  }
+  
+  footer {
+    background-color: #102f5e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
