@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Investimento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0056b3, #102f5e);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        input {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 300px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: #0056b3;
+            border: 2px solid #0056b3;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        #resultado {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Investimento</h1>
+    
+    <label for="capitalInicial">Capital Inicial (R$): </label>
+    <input type="number" id="capitalInicial" placeholder="Ex: 1000" step="0.01"><br>
+    
+    <label for="taxaJuros">Taxa de Juros (%) ao mês: </label>
+    <input type="number" id="taxaJuros" placeholder="Ex: 5" step="0.01"><br>
+    
+    <label for="periodo">Período (meses): </label>
+    <input type="number" id="periodo" placeholder="Ex: 12"><br>
+    
+    <button onclick="calcularInvestimento()">Calcular</button>
+    
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularInvestimento() {
+            // Obter os valores inseridos pelo usuário
+            const capitalInicial = parseFloat(document.getElementById("capitalInicial").value);
+            const taxaJuros = parseFloat(document.getElementById("taxaJuros").value) / 100;
+            const periodo = parseInt(document.getElementById("periodo").value);
+
+            // Validar os dados de entrada
+            if (isNaN(capitalInicial) || isNaN(taxaJuros) || isNaN(periodo)) {
+                document.getElementById("resultado").innerHTML = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            // Fórmula de juros compostos: M = C * (1 + i)^t
+            const montanteFinal = capitalInicial * Math.pow(1 + taxaJuros, periodo);
+            
+            // Exibir o resultado
+            document.getElementById("resultado").innerHTML = `Após ${periodo} meses, seu investimento será de R$ ${montanteFinal.toFixed(2)}.`;
+        }
+    </script>
+</body>
+</html>
