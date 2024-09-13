@@ -1,0 +1,195 @@
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
+  color: #333;
+}
+
+body {
+  background: linear-gradient(135deg, #0056b3, #102f5e); /* Azul escuro a azul claro */
+  background-position: center;
+  background-size: cover;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Botões */
+button {
+  background-color: #ffffff;
+  color: #0056b3;
+  border: 2px solid #0056b3;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+  transform: scale(1.05); /* Leve aumento no botão */
+}
+
+button i {
+  pointer-events: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+button:hover i {
+  color: #ffffff;
+}
+
+/* Inputs e Selects */
+input,
+select {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+/* Container das Tarefas */
+.todo-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.todo-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.todo-container header {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #0056b3;
+  margin-bottom: 1rem; /* Espaço entre o cabeçalho e o formulário */
+}
+
+/* Formulários */
+#todo-form,
+#edit-form {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#todo-form p,
+#edit-form p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.form-control input {
+  flex: 1;
+  padding: 0.75rem; /* Aumenta o tamanho do campo de entrada */
+}
+
+/* Formulários - Input e Select */
+#deadline-input,
+#category-select {
+  margin-left: 0.5rem;
+  width: 180px; /* Aumenta a largura dos campos */
+}
+
+/* Toolbar - Pesquisar e Filtrar */
+#toolbar {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search {
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+#search input {
+  width: 100%;
+  padding: 0.75rem; /* Aumenta o tamanho do campo de pesquisa */
+  border-radius: 8px;
+}
+
+#filter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#filter select {
+  width: 100%;
+  padding: 0.75rem; /* Aumenta o tamanho do campo de filtro */
+  border-radius: 8px;
+}
+
+/* Lista de Tarefas */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.todo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo h3 {
+  flex: 1;
+  font-size: 1rem;
+  color: #0056b3;
+}
+
+.done {
+  background: #2b3294;
+}
+
+.done h3 {
+  color: #ffffff;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.todo.priority {
+  border: 2px solid #f44336;
+  background-color: #ffe0e0;
+}
